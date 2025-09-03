@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0d0f14;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background: #000;
+}
+.navbar a {
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+}
+.login-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 40px;
+}
+.hero hr {
+  width: 200px;
+  margin: 10px auto;
+  border: 1px solid #2a2a2a;
+}
+.hero input {
+  margin-top: 20px;
+  width: 60%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* Content Layout */
+.content {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+}
+
+/* Left Card */
+.left-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.purchase-box {
+  margin-top: 20px;
+  background: #151820;
+  padding: 20px;
+  border-radius: 12px;
+}
+.purchase-box h2 {
+  color: #00e0ff;
+}
+.purchase-box .small {
+  font-size: 14px;
+  color: gray;
+}
+.purchase-box textarea {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+}
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+.chat, .cart, .request {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.chat {
+  background: #333;
+  color: white;
+}
+.cart {
+  background: #00e0ff;
+  color: black;
+}
+.request {
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid #00e0ff;
+  color: #00e0ff;
+}
+
+/* Right Card */
+.right-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.product-card, .vendor-card {
+  background: #151820;
+  padding: 20px;
+  border-radius: 12px;
+}
+.badge {
+  background: green;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.tags span {
+  background: #222;
+  padding: 5px 10px;
+  margin: 5px 5px 0 0;
+  border-radius: 6px;
+  display: inline-block;
+}
+.vendor-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+  color: gray;
+}
