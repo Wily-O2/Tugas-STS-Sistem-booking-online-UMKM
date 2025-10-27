@@ -1,0 +1,142 @@
+.Judul {
+    margin-left:440px;
+    margin-top: 60px;
+}
+
+.search-container {
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.set-up{
+    font-size: 20px;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.box-digital{
+   width: 87%;
+   margin: auto;
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   gap: 15px;
+   padding: 20px;
+}
+
+.box {
+    border: 1px solid white;
+    padding-bottom: 280px;
+    border-radius: 8px;padding-bottom: 280px;
+    flex: 1;
+    min-width: 200px;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.box p {
+    text-align: center;
+    margin: 0px;
+    transform: translateY(140px)
+    
+}
+
+.box:hover {
+    background-color: #192234   ;
+    transform: scale(1.05);
+    opacity: 50%   ;
+}
+
+.gambar {
+     border: 1px solid white;
+    width: 1050px;
+    padding: 200px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 100px;
+}
+
+#Book {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.Box-Book {
+    width: 87%;
+   margin: auto;
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   gap: 20px;
+   padding: 20px;
+}
+
+.Box {
+    border: 1px solid white;
+    padding-bottom: 280px;
+    border-radius: 8px;padding-bottom: 280px;
+    flex: 1;
+    min-width: 200px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    transition: 400ms;
+}
+
+.Box p{
+    text-align: center;
+    margin: 0px;
+    transform: translateY(140px)
+}
+
+.Box:hover {
+    background-color: #192234   ;
+    transform: scale(1.05);
+    opacity: 50%   ;
+}
+
+#Place {
+    text-align: center;
+}
+
+.place-Meeting {
+    width: 87%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.BoxPlace {
+    border: 1px solid white;
+    padding-bottom: 280px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 200px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    transition: 400ms;
+}
+
+.BoxPlace p {
+    text-align: center;
+    margin: 0px;
+    transform: translateY(140px)
+}
+
+.BoxPlace:hover{
+    background-color: #192234   ;
+    transform: scale(1.05);
+    opacity: 50%   ;
+}
+
+.About-us {
+    border: 1px solid #323232;
+    padding: 200px;
+  border-radius: 10px;
+  background-color: #323232;
+
+}
