@@ -1,0 +1,207 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid #222;
+}
+
+header nav a {
+  margin: 0 12px;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #3b82f6;
+}
+
+.Story-behind {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.Empowering {
+    color: #a3a3a3;
+}
+
+.contact-us {
+    margin-top: 50px;
+    border: 1px;
+    width: 100px;
+    border-radius: 5px;
+    margin-left: 570px;
+    background-color: #3b82f6;
+    transition: 0,3s;
+    cursor: pointer;
+}
+
+.contact-us:hover{
+    background: transparent;
+    background-color: #2563eb;
+}
+.Photo-1{
+    border: 1px solid white;
+    width: 250px;
+    padding-bottom: 160px;
+    border-radius: 20px;
+    margin-left: 550px;
+    margin-top: 20px;
+}
+
+.Photo-2{
+    border: 1px solid white;
+    width: 300px;
+    padding-bottom: 165px;
+    border-radius: 20px;
+    margin-left: 300px;
+    margin-top: -100px;
+}
+
+.Photo-3 {
+    border: 1px solid white;
+    width: 200px;
+    padding-bottom: 170px;
+    border-radius: 20px;
+    margin-left: 750px;
+    margin-top: -10px;
+}
+
+.Photo-4 {
+     border: 1px solid white;
+    width: 250px;
+    padding-bottom: 160px;
+    border-radius: 20px;
+    margin-left: 450px;
+    margin-top: -220px;
+}
+
+.innovation {
+    margin-top: 80px;
+}
+
+.Founding {
+    color: #a3a3a3;
+}
+
+.box-about{
+    border: 1px solid #3e3d3d;
+    background-color: #2e2c2c;
+    width: 250px;
+    padding-bottom: 200px;
+    margin-left: 150px;
+    margin-top: -380px;
+}
+
+.Photo-5 {
+    border: 1px solid white;
+    width: 250px;
+    padding-bottom: 350px;
+    border-radius: 20px;
+    margin-left: 880px;
+    margin-top: 100px;
+}
+
+
+.Our-Mission {
+    margin-left: -450px;
+    margin-top: -100px;
+}
+
+.Text-Our-Mission {
+    text-align: left;
+    margin-left: 200px;
+}
+
+.Garis-1 {
+    border: 1px solid white;
+    width: 1000px;
+    margin-top: 60px;
+    margin-left: 120px;
+}
+
+.Garis-2 {
+    border: 1px solid white;
+    width: 1100px;
+    margin-top: 10px;
+    margin-left: 75px;
+}
+
+.Our-team {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.Wily-Sepiro{
+    margin-left: 550px;
+    margin-top: 150px;
+}
+
+.Box-Our-Team {
+    border: 1px solid white;
+    width: 300px;
+    padding-bottom: 350px;
+    border-radius: 20px;
+    margin-left: 130px;
+    margin-top: -300px;
+}
+
+.Square{
+    border: 1px ;
+    width: 300px;
+    padding-bottom: 300px;
+    margin-left: 850px;
+    background-color: #222;
+    margin-top: -220px;
+}
+
+.Box-Our-Team-2{
+     border: 1px solid white;
+    width: 300px;
+    padding-bottom: 350px;
+    border-radius: 20px;
+    margin-left: 850px;
+    margin-top: 200px;
+}
+
+.Lewis-Winschester{
+     margin-right: 500px;
+    margin-top: -300px;
+    text-align: right;
+}
+
+.Square-1{
+    border: 1px ;
+    width: 300px;
+    padding-bottom: 300px;
+    margin-left: 200px;
+    background-color: #222;
+    margin-top: -500px;
+}
+
+.Box-Our-Team-3{
+     border: 1px solid white;
+    width: 300px;
+    padding-bottom: 350px;
+    border-radius: 20px;
+    margin-left: 130px;
+    margin-top: 400px;
+}
+
+.Valentino{
+    margin-top: -300px;
+    text-align: left;
+}
+
+.V {
+    margin-left: 550px;
+}
+
+.Square-2{
+    border: 1px ;
+    width: 300px;
+    padding-bottom: 300px;
+    margin-left: 850px;
+    background-color: #222;
+    margin-top: -300px;
+}

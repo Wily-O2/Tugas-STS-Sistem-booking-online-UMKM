@@ -1,0 +1,132 @@
+.Judul {
+    margin-left:440px;
+    margin-top: 60px;
+}
+
+.search-container {
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.set-up{
+    font-size: 20px;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.How-It-Works {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.box-1 {
+    border: 1px solid white;
+    width: 380px;
+    padding-bottom:230px ;
+    border-radius: 20px;
+    margin-left: 130px;
+    margin-top: 70px;
+}
+.Text-1 {
+    margin-left: 600px;
+    margin-top: -230px;
+}
+
+.box-2 {
+     border: 1px solid white;
+    width: 380px;
+    padding-bottom:230px ;
+    border-radius: 20px;
+    margin-left: 720px;
+    margin-top: 200px;
+}
+
+.Text-2 {
+    margin-right: 620px;
+     margin-top: -220px;   
+    text-align: right;  
+}
+
+.box-3 {
+    border: 1px solid white;
+    width: 380px;
+    padding-bottom:230px ;
+    border-radius: 20px;
+    margin-left: 130px;
+    margin-top: 180px;
+}
+.Text-3 {
+    margin-left: 600px;
+    margin-top: -250px;
+}
+
+.Box-Shadow-1{
+    border: 1px ;
+    width: 300px;
+    padding-bottom: 200px;
+    margin-left: 350px;
+    background-color: #222;
+    margin-top: 50px;
+}
+
+.box-4 {
+     border: 1px solid white;
+    width: 380px;
+    padding-bottom:230px ;
+    border-radius: 20px;
+    margin-left: 720px;
+    margin-top: -70px;
+}
+
+.Text-4 {
+     margin-right: 620px;
+     margin-top: -250px; 
+     text-align: right;
+}
+
+.Box-Shadow-2 {
+     border: 1px ;
+    width: 300px;
+    padding-bottom: 200px;
+    margin-left: 900px;
+    background-color: #222;
+    margin-top: 20px;
+}
+
+.box-5 {
+    border: 1px solid white;
+    width: 380px;
+    padding-bottom:230px ;
+    border-radius: 20px;
+    margin-left: 130px;
+    margin-top: 0px;
+}
+
+.Text-5 {
+     margin-left: 600px;
+    margin-top: -240px;
+}
+
+.Box-Shadow-3 {
+    border: 1px ;
+    width: 300px;
+    padding-bottom: 200px;
+    margin-left: 300px;
+    background-color: #222;
+    margin-top: 20px;
+}
+
+.box-6 {
+     border: 1px solid white;
+    width: 380px;
+    padding-bottom:230px ;
+    border-radius: 20px;
+    margin-left: 720px;
+    margin-top: -30px;
+}
+
+.Text-6 {
+     margin-right: 620px;
+     margin-top: -250px; 
+     text-align: right;
+}
