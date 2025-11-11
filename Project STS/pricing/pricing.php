@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Main.css">
 </head>
 <body>
-      <header>
+          <header>
     <nav>
       <a href="Main.Html">Home</a>
       <a href="#">Product</a>
@@ -21,11 +21,11 @@
     <h1>Sistem Booking Online untuk UMKM</h1>
     <p>Mudah, cepat, dan efisien untuk bisnis anda</p>
     <hr>
-    <input type="text" placeholder="Cari produk, jasa, dan vendor">
         </section>
   <section class="content">
     <div class="left-card">
-      <img src="https://via.placeholder.com/500x250" alt="Preview Produk">
+      <img src="Gambar/WhatsApp Image 2025-10-31 at 10.37.09.jpeg" alt="Preview Produk">
+
       <div class="purchase-box">
         <h3>Atur Pembelian</h3>
         <p>Total Harga</p>
@@ -35,10 +35,14 @@
         <div class="btn-group">
           <button class="chat">Chat Penjual</button>
           <button class="cart">+ Keranjang</button>
+          <button class="request">Ajukan Permintaan</button>
         </div>
-        <button class="request">Ajukan Permintaan</button>
+        <div class="btn-beli">
+          <button class="beli">Beli Sekarang</button>
+        </div>
       </div>
     </div>
+
     <div class="right-card">
       <div class="product-card">
         <span class="badge">Jasa</span>
@@ -62,7 +66,11 @@
         </div>
           </div>
         </div>
-      </div>
 
+        <div class="rightbottom-card">
+          <h3>PT. ABCd</h3>
+          <h5>Jakarta Pusat</h5>
+          <h5>ABCD</h5>
+      </div>
 </body>
 </html>
