@@ -35,6 +35,18 @@ Seluruh Web
 - Bagian table / Dalam
 - Login/Register (Log out)
 
+Entitas
+- Kami mengunakan User yang masuk ke website kami
+
+
+Cara mengunakan:
+- User mengunakan Command git clone https://github.com/Wily-O2/Tugas-STS-Sistem-booking-online-UMKM
+- User membuka vs code dengan databases Toura yang sudah di berikan
+- user membuka tampilan login dan login
+- user memencet profile
+- Set up jadwal booking pada calender
+- User dapat masuk ke bagian profile dan mengedit bagian Dalam atau table penjualan
+
 Arsitektur Project
 Frontend: HTML, CSS, JavaScript
 
