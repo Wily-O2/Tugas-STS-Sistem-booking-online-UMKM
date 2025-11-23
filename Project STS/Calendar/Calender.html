@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toura - Calendar</title>
+    <link rel="stylesheet" href="Calender.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="#" class="active">Home</a>
+        </div>
+        <div class="nav-right">
+            <a href="../produk/Product.php">Product</a>
+            <a href="../About/about.php">About</a>
+            <a href="../feature/feature.php">Features</a>
+            <a href="../pricing/pricing.php">Pricing</a>
+            <a href="../login/login.php" class="login-btn">Login</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="20" r="8" stroke="white" stroke-width="3" fill="none"/>
+                    <circle cx="25" cy="45" r="8" stroke="white" stroke-width="3" fill="none"/>
+                    <circle cx="75" cy="45" r="8" stroke="white" stroke-width="3" fill="none"/>
+                    <circle cx="35" cy="75" r="8" stroke="white" stroke-width="3" fill="none"/>
+                    <circle cx="65" cy="75" r="8" stroke="white" stroke-width="3" fill="none"/>
+                    <line x1="50" y1="28" x2="30" y2="40" stroke="white" stroke-width="3"/>
+                    <line x1="50" y1="28" x2="70" y2="40" stroke="white" stroke-width="3"/>
+                    <line x1="25" y1="53" x2="35" y2="67" stroke="white" stroke-width="3"/>
+                    <line x1="75" y1="53" x2="65" y2="67" stroke="white" stroke-width="3"/>
+                    <line x1="35" y1="75" x2="65" y2="75" stroke="white" stroke-width="3"/>
+                </svg>
+            </div>
+            <h1>Toura</h1>
+        </div>
+
+        <h2>Calender</h2>
+
+        <div class="calendar-wrapper">
+            <div class="calendar-section">
+                <div class="month-nav">
+                    <button id="prevMonth">&lt;</button>
+                    <span id="currentMonth">Sep 2025</span>
+                    <button id="nextMonth">&gt;</button>
+                </div>
+
+                <div class="calendar">
+                    <div class="weekdays">
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                        <div>Sun</div>
+                    </div>
+                    <div class="days">
+                        <div class="day active" data-day="1">1</div>
+                        <div class="day" data-day="2">2</div>
+                        <div class="day" data-day="3">3</div>
+                        <div class="day" data-day="4">4</div>
+                        <div class="day" data-day="5">5</div>
+                        <div class="day" data-day="6">6</div>
+                        <div class="day" data-day="7">7</div>
+                        <div class="day" data-day="8">8</div>
+                        <div class="day" data-day="9">9</div>
+                        <div class="day" data-day="10">10</div>
+                        <div class="day" data-day="11">11</div>
+                        <div class="day" data-day="12">12</div>
+                        <div class="day" data-day="13">13</div>
+                        <div class="day" data-day="14">14</div>
+                        <div class="day" data-day="15">15</div>
+                        <div class="day" data-day="16">16</div>
+                        <div class="day" data-day="17">17</div>
+                        <div class="day" data-day="18">18</div>
+                        <div class="day" data-day="19">19</div>
+                        <div class="day" data-day="20">20</div>
+                        <div class="day" data-day="21">21</div>
+                        <div class="day" data-day="22">22</div>
+                        <div class="day" data-day="23">23</div>
+                        <div class="day" data-day="24">24</div>
+                        <div class="day" data-day="25">25</div>
+                        <div class="day" data-day="26">26</div>
+                        <div class="day" data-day="27">27</div>
+                        <div class="day" data-day="28">28</div>
+                        <div class="day" data-day="29">29</div>
+                        <div class="day" data-day="30">30</div>
+                        <div class="day" data-day="31">31</div>
+                    </div>
+                </div>
+
+                <div class="timezone">
+                    <h3>TIME ZONE</h3>
+                    <div class="timezone-select">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>Eastern time - US & Canada</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-section">
+                <div class="booking-date" id="bookingDate">Monday, Sep 1</div>
+                <div class="time-slots">
+                    <div class="time-slot" data-time="10:00">10.00am</div>
+                    <div class="time-row">
+                        <div class="time-slot selected" data-time="11:00">11.00am</div>
+                    </div>
+                    <div class="time-slot" data-time="13:00">1.00pm</div>
+                    <div class="time-slot" data-time="14:00">2.00pm</div>
+                    <div class="time-slot" data-time="15:00">3.00pm</div>
+                    <div class="time-slot confirm" id="confirmBtn">Confirm</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Calender.js"></script>
+</body>
+</html>

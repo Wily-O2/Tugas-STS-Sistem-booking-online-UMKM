@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,18 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Toura</title>
   <link rel="stylesheet" href="/Project STS/home1/Main.css">
+  <link rel="stylesheet" href="/Project STS/user.css">
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
   <header>
     <nav>
-      <a href="#">Home</a>
-      <a href="Product.html">Product</a>
-      <a href="about.html">About</a>
-      <a href="feature.html">Features</a>
-      <a href="pricing.html">Pricing</a>
+      <a href="Main.php">Home</a>
+      <a href="produk/Product.php">Product</a>
+      <a href="About/about.php">About</a>
+      <a href="feature/feature.php">Features</a>
+      <a href="pricing/pricing.php">Pricing</a>
     </nav>
-    <button class="btn btn-blue">Login</button>
+    <?php if (isset($_SESSION['user_id'])): ?>
+      <div class="user-menu">
+        <i class="bx bx-user user-icon"></i>
+        <div class="dropdown-menu">
+          <table>
+            <tr><td><a href="user.php">Profile</a></td></tr>
+            <tr><td><a href="user.php#settings">Settings</a></td></tr>
+            <tr><td><a href="login/logout.php">Logout</a></td></tr>
+          </table>
+        </div>
+      </div>
+    <?php else: ?>
+      <a href="login/login.php" class="btn btn-blue">Login</a>
+    <?php endif; ?>
   </header>
 
   <section class="hero">
@@ -81,7 +97,6 @@
     </form>
   </section>
 
-  <!-- Text Content -->
   <section class="text-section">
     <h3>Toura suite of products was made to grow Entrepreneurs and Service SMBs</h3>
     <p>
@@ -91,7 +106,6 @@
     </p>
   </section>
 
-  <!-- Bottom Images -->
   <div class="bottom-images">
     <img src="https://source.unsplash.com/300x200/?calendar" alt="bottom1">
     <img src="https://source.unsplash.com/300x200/?laptop" alt="bottom2">

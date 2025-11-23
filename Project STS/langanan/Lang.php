@@ -1,20 +1,76 @@
+<?php
+session_start();
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "toura";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Check if user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../login/login.php");
+    exit();
+}
+
+// Handle subscription
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['subscribe'])) {
+    $plan_name = $_POST['plan_name'];
+    $price = $_POST['price'];
+    $user_id = $_SESSION['user_id'];
+
+    $stmt = $conn->prepare("INSERT INTO subscriptions (user_id, plan_name, price) VALUES (?, ?, ?)");
+    $stmt->bind_param("isd", $user_id, $plan_name, $price);
+    if ($stmt->execute()) {
+        $success = "Subscription successful!";
+    } else {
+        $error = "Error: " . $stmt->error;
+    }
+    $stmt->close();
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Document</title>
-    <link rel="stylesheet" href="Main.css">
+    <link rel="stylesheet" href="/Project STS/home1/Main.css">
+    <link rel="stylesheet" href="/Project STS/user.css">
     <link rel="stylesheet" href="Lang.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
     <nav>
-      <a href="#">Home</a>
-      <a href="Product.html">Product</a>
-      <a href="about.html">About</a>
-      <a href="feature.html">Features</a>
-      <a href="pricing.html">Pricing</a>
+      <a href="../Main.php">Home</a>
+      <a href="../produk/Product.php">Product</a>
+      <a href="../About/about.php">About</a>
+      <a href="../feature/feature.php">Features</a>
+      <a href="../pricing/pricing.php">Pricing</a>
     </nav>
-    <button class="btn btn-blue">Login</button>
+    <?php if (isset($_SESSION['user_id'])): ?>
+      <div class="user-menu">
+        <i class="bx bx-user user-icon"></i>
+        <div class="dropdown-menu">
+          <table>
+            <tr><td><a href="../user.php">Profile</a></td></tr>
+            <tr><td><a href="../user.php#settings">Settings</a></td></tr>
+            <tr><td><a href="../login/logout.php">Logout</a></td></tr>
+          </table>
+        </div>
+      </div>
+    <?php else: ?>
+      <button class="btn btn-blue"><a href="../login/login.php">Login</a></button>
+    <?php endif; ?>
   </header>
   <main> 
 <div class="Lang-Header">
@@ -62,7 +118,11 @@
         </ul>
 
         <div class="card-footer">
-          <button class="btn-subscribe">Subscribe</button>
+          <form method="POST" action="">
+            <input type="hidden" name="plan_name" value="Schedule Pro V1">
+            <input type="hidden" name="price" value="0.80">
+            <button type="submit" name="subscribe" class="btn-subscribe">Subscribe</button>
+          </form>
           <div class="price">$ 0.80</div>
         </div>
       </div>
@@ -98,7 +158,11 @@
         </ul>
 
         <div class="card-footer">
-          <button class="btn-subscribe">Subscribe</button>
+          <form method="POST" action="">
+            <input type="hidden" name="plan_name" value="Schedule Pro V3">
+            <input type="hidden" name="price" value="2.40">
+            <button type="submit" name="subscribe" class="btn-subscribe">Subscribe</button>
+          </form>
           <div class="price">$ 2.40</div>
         </div>
       </div>

@@ -23,17 +23,55 @@ header {
   align-items: center;
   padding: 15px 40px;
   border-bottom: 1px solid #222;
+  position: relative;
+  z-index: 100;
+  background-color: #000;
+}
+
+header nav {
+  display: flex;
+  gap: 0;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
 }
 
 header nav a {
-  margin: 0 12px;
-  font-size: 14px;
-  transition: color 0.3s;
+  margin: 0;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #121212;
+  border-right: none;
+  background-color: #f2f2f2;
+  transition: background-color 0.3s ease;
+  border-radius: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
 }
-
-header nav a:hover {
-  color: #3b82f6;
+header nav a:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
+header nav a:last-child {
+  border-right: 1px solid #121212;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+header nav a:hover, header nav a:focus {
+  background-color: #d0e7ff;
+  color: #1356d8;
+  outline: none;
+}
+header nav a:active {
+  background-color: #b8d4ff;
+}
+header .logo {
+  font-size: 24px;
+  font-weight: bold;}
 
 .btn {
   padding: 8px 16px;
@@ -42,6 +80,11 @@ header nav a:hover {
   cursor: pointer;
   border: none;
   transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .btn-blue {
@@ -51,6 +94,10 @@ header nav a:hover {
 
 .btn-blue:hover {
   background: #2563eb;
+}
+
+header .btn {
+  margin: 0;
 }
 
 .btn-outline {

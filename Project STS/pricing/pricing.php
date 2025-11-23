@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,17 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toura</title>
     <link rel="stylesheet" href="/Project STS/home1/Main.css">
+    <link rel="stylesheet" href="/Project STS/user.css">
 </head>
 <body>
           <header>
     <nav>
-      <a href="Main.Html">Home</a>
-      <a href="#">Product</a>
-      <a href="#">About</a>
-      <a href="#">Features</a>
-      <a href="#">Pricing</a>
+      <a href="../home2/Home2.html">Home</a>
+      <a href="../produk/Product.php">Product</a>
+      <a href="../About/about.php">About</a>
+      <a href="../feature/feature.php">Features</a>
+      <a href="pricing.php">Pricing</a>
     </nav>
-    <button class="btn btn-blue">Login</button>
+    <?php if (isset($_SESSION['user_id'])): ?>
+      <div class="user-menu">
+        <i class="bx bx-user user-icon"></i>
+        <div class="dropdown-menu">
+          <table>
+            <tr><td><a href="profile.php">Profile</a></td></tr>
+            <tr><td><a href="settings.php">Settings</a></td></tr>
+            <tr><td><a href="login/logout.php">Logout</a></td></tr>
+          </table>
+        </div>
+      </div>
+    <?php else: ?>
+      <button class="btn btn-blue"><a href="login/login.php">Login</a></button>
+    <?php endif; ?>
   </header>
   <section class="hero">
     <h1>Sistem Booking Online untuk UMKM</h1>

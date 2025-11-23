@@ -1,57 +1,54 @@
 <?php
 session_start();
 
-// Database connection
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "toura";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Create users table if it doesn't exist
-$sql = "CREATE TABLE IF NOT EXISTS users (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(30) NOT NULL UNIQUE,
-    email VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-)";
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signup'])) {
+        $username = trim($_POST['username']);
+        $email = trim($_POST['email']);
+        $password = $_POST['password'];
+        $confirm_password = $_POST['confirm_password'];
 
-if ($conn->query($sql) === FALSE) {
-    echo "Error creating table: " . $conn->error;
-}
-
-// Handle signup
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signup'])) {
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $confirm_password = $_POST['confirm_password'];
-
-    if ($password !== $confirm_password) {
-        $error = "Passwords do not match.";
-    } else {
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
-        $stmt->bind_param("sss", $username, $email, $hashed_password);
-        if ($stmt->execute()) {
-            $success = "Account created successfully. Please log in.";
+        if ($password !== $confirm_password) {
+            $error = "Passwords do not match.";
         } else {
-            $error = "Error: " . $stmt->error;
+            // Check if username or email already exists
+            $check_stmt = $conn->prepare("SELECT id FROM users WHERE username = ? OR email = ?");
+            $check_stmt->bind_param("ss", $username, $email);
+            $check_stmt->execute();
+            $check_stmt->store_result();
+            if ($check_stmt->num_rows > 0) {
+                $error = "Username or email already exists.";
+            } else {
+                $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+                $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
+                $stmt->bind_param("sss", $username, $email, $hashed_password);
+                try {
+                    if ($stmt->execute()) {
+                        $success = "Account created successfully. Please log in.";
+                    } else {
+                        $error = "Error: " . $stmt->error;
+                    }
+                } catch (mysqli_sql_exception $e) {
+                    $error = "Error: Duplicate entry detected.";
+                }
+                $stmt->close();
+            }
+            $check_stmt->close();
         }
-        $stmt->close();
     }
-}
 
 // Handle login
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
-    $username = $_POST['username'];
+    $username = trim($_POST['username']);
     $password = $_POST['password'];
 
     $stmt = $conn->prepare("SELECT id, password FROM users WHERE username = ?");
@@ -59,21 +56,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
     $stmt->execute();
     $stmt->store_result();
     $stmt->bind_result($id, $hashed_password);
+
     if ($stmt->num_rows > 0) {
         $stmt->fetch();
-        if (password_verify($password, $hashed_password)) {
-            $_SESSION['user_id'] = $id;
-            $_SESSION['username'] = $username;
-            header("Location: ../Main.php"); // Redirect to main page after login
-            exit();
+            if (password_verify($password, $hashed_password)) {
+                $_SESSION['user_id'] = $id;
+                $_SESSION['username'] = $username;
+                header("Location: ../Main.php");
+                exit();
+            } else {
+                $error = "Invalid password.";
+            }
         } else {
-            $error = "Invalid password.";
+            $error = "Username not found.";
         }
-    } else {
-        $error = "Username not found.";
+        $stmt->close();
     }
-    $stmt->close();
-}
 
 $conn->close();
 ?>
@@ -85,6 +83,8 @@ $conn->close();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Project STS/home1/Main.css">
+    <link rel="stylesheet" href="/Project STS/user.css">
     <link rel="stylesheet" href="login.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" type="image/gif/png" href="./images/Main Tab Image-Logo.png">

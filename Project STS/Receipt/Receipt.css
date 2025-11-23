@@ -13,3 +13,38 @@ body {
     border-bottom: 1px solid #fff;
     margin-top: 20px;
 }
+.payment-method {
+    margin-top: 10px;
+    font-weight: 600;
+    font-family: poppins, sans-serif;
+    color: #fff;
+}
+.product-image {
+    width: 80%;
+    height: 35%;
+    object-fit: cover;
+    border-radius: 5px;
+    padding: 35px;
+    align-items: center;
+    margin-left: 7%;
+}
+.border-receipt {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #1e1e1e;
+}
+.information {
+    margin-top: 10px;
+    font-weight: 400;
+    font-family: poppins, sans-serif;
+    color: #fff;
+}
+.line1 {
+    border-bottom: 1px solid #fff;
+    margin-top: 10px;
+}
+.line2 {
+    border-bottom: 1px solid #fff;
+    margin-top: 20px;
+}
