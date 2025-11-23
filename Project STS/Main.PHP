@@ -107,7 +107,7 @@
   </section>
 
   <div class="bottom-images">
-    <img src="https://source.unsplash.com/300x200/?calendar" alt="bottom1">
+    <img src="../Gambar/Home Page/16+ Serene Zen Office Ideas for a Peaceful Workspace" alt="bottom1">
     <img src="https://source.unsplash.com/300x200/?laptop" alt="bottom2">
     <img src="https://source.unsplash.com/300x200/?office" alt="bottom3">
     

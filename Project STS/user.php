@@ -149,7 +149,7 @@ $profile_picture = $user['profile_picture'] ?? '';
           <i class='bx bx-line-chart'></i>
           <span>Your Revenue</span>
         </a>
-        <a href="#" class="nav-item">
+        <a href="Calendar/Calender.html" class="nav-item">
           <i class='bx bx-calendar'></i>
           <span>Calendar</span>
         </a>
